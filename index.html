@@ -9,30 +9,57 @@ html{background:#def;}
 body {margin:0;padding:3rem;font-size:1rem;font-family:system, system-ui, -apple-system, ".SFNSText-Regular", "San Francisco", "Oxygen", "Ubuntu", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; line-height: 1.3; background-color:#fff;color:#000;min-height:100vh;min-width:100vw;box-sizing:border-box;}
 a:link, a:visited{color:#000;text-decoration:underline;}
 a:hover{cursor:pointer;background-color:#cf0;}
-h1,h2,h3,h4,h5,h6{}
+/* space before, related to following */
+h1,h2,h3,h4,h5,h6{margin-inline:0;margin-block-start:0.5rem;margin-block-end:0.2rem;}
+/* space after, related to previous*/
+p{margin-inline:0;margin-block-start:0;margin-block-end:0.5rem;}
 h1,h2{font-size:1.4rem;}
 h3,h4{font-size:1rem;}
 h5,h6{font-size:0.8rem;}
 h2,h4,h6{font-weight:normal;}
 nav a{display:block;}
+img{border:1px solid #000;}
 [wip]:after{content:'*';color:red;}
+[wip]:active:after,
+[wip]:hover:after{content:'*wip';color:red;}
 </style>
 </head><body>
+<img jim alt src="https://avatars1.githubusercontent.com/u/775538?s=460&v=4" width="50" height="50">
 <h1>Jim Montgomery</h1>
-<h2>various projects</h2>
+<h2 wip>projects in various states of progress</h2>
 <nav>
+<a href="https://gist.github.com/jimmont/aaa946e035875270f2c7179aaec11c7f">email validation, including i18n</a>
+<a href="/devdevdev/http.js"><b>devdevdev/http.js</b> for development</a>
 <a wip href="/unpkg"><b>unpkg</b> using unpkg.com to source modules</a>
 <a wip href="/devdevdev"><b>devdevdev</b> various utilities</a>
-<a href="/devdevdev/http.js"><b>devdevdev/http.js</b> for development</a>
 <a href="/devdevdev/www/test-bdd.js"><b>test-bdd</b> experimental testing library</a>
-<a href="/devdevdev/www/test.js"><b>test</b> for testing experimental testing</a>
 <a href="/demos">demos</a>
-<a href="https://www.jimmont.com/">jimmont.com</a>
 <a href="https://powerstrip.app/"><b>powerstrip.app</b> antibody analysis tools</a>
 
-<a href="https://gist.github.com/jimmont/aaa946e035875270f2c7179aaec11c7f">email validation, including i18n</a>
 
 <a href="https://github.com/jimmont">github/jimmont</a>
 </nav>
-<img alt src="https://avatars1.githubusercontent.com/u/775538?s=460&v=4" width="260" height="260">
+<h2>general approach</h2>
+<p>Continuous improvement with respect and appreciation for the individuals composing the team and community. Working together we generally accomplish more than apart. We are a composite of the intersections of and with others, realizing opportunities by focusing on them and finding solutions. More detail at <a href="https://en.wikipedia.org/wiki/The_Toyota_Way">The Toyota Way</a>, <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">Scrum</a> and <a href="https://en.wikipedia.org/wiki/Agile_software_development">Agile</a>.</p>
+<h2>browser strategy</h2>
+<p>Target modern browsers mobile through desktop, and transpile a 2nd variant for the legacy clients. Polyfill for modern when features are in active use and doing so brings parity at low cost. This provides a low overhead, cost-effective forward looking solution while maintaining a distinct cost-controlled view for the remaining audience. For larger projects and organizations higher predictability and stability can be gained with something like TypeScript, however there's a cost associated in the tradeoff. Web APIs are becoming more stable and consistent, solving problems that numerous libraries did previously. This allows reducing external dependencies and all the risk and overhead these bring to a project (actual native solutions: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a>,
+<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Web Components</a>,
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables/properties</a>,
+<a href="https://developer.mozilla.org/en-US/docs/Web/SVG">svg</a>,
+<a href="https://developer.mozilla.org/en-US/docs/Web/API">etc</a>).
+</p>
+<h2>branching</h2>
+<p>Generally master - bugfix - develop - features with tagging for releases. Work off develop and features by default. Master and bugfix are coordinated by a core infrastructure with predictable handling of the flow from develop toward master.</p>
+<h2>release</h2>
+<p>Always maintain one or more rollback options for fault tolerance and immediate recovery. Setting up an environment and deployment process where a load balancer can switch between active release candidates allows direct testing, release, rollback and iteration through these as necessary. Maintaining a balance of cache tuning with client and application features at the various layers can provide positive returns in service quality.</p>
+<h2>testing</h2>
+<p>A balance of unit, functional and composite end-to-end testing provides best value. Unit tests duplicate code size and must be maintained to not provide false negatives. Ideally long-lived and especially high-use code has coverage--otherwise that investment, especially initially can be better made at higher-level coverage. Functional and compositve e2e tests are increasingly expensive yet provide very high value. Imagine customers cannot login to the product or a sales person cannot make a presentation. Being able to auto-play these scenarios by anyone in the organization, including for sales presentations, is of high value to the business.</p>
+<h2>versioning</h2>
+<p>major.minor.patch - major integer indicating backward-incompatible; minor integer indicating features are backward-compatible; patch fixes bugs indicated by a integer prepresentation of the release time, naturally incrementing forward. Something like <code>0.4.20000101080000000 from <code>`major.minor.(new Date('2000-01-01 ')).toISOString().replace(/[^\d]/g, '')`</code>.</p>
+<h2>experience</h2>
+<p>note: varying depth for any given item</p>
+<p wip>technologies: Web, Web Components, d3, React, JavaScript, Perl, Go, C, Python, C#, Angularjs, React+Redux, jQuery, d3, vanilla js, WebdriverIO, Emberjs, Express, Git, Jenkins, MySQL, Postgresql, SQL Server, SQLite, Firebase, Debian, macOS, ES5, ES6+; currently using git, native Web APIs and vanilla ES6+ in Nodejs via GCP/Firebase, NWjs, ...TODO...</p>
+<p wip>topics: healthcare, chemistry, biosciences, art, illustration, graphic design, visual communications, photography, mail delivery, business, startup, sbir, founder, gardening, landscaping, construction, framing, carpentry, motorcycling, driving, cycling, swimming, surfing, racing, genetics, DNA, family tree</p>
+<hr>
+<img jim alt src="https://avatars1.githubusercontent.com/u/775538?s=460&v=4" width="200" height="200">
 </body></html>
