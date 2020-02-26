@@ -8,8 +8,12 @@
 <style>
 html{background:#def;}
 body {margin:0;padding:3rem;font-size:1rem;font-family:system, system-ui, -apple-system, ".SFNSText-Regular", "San Francisco", "Oxygen", "Ubuntu", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; line-height: 1.3; background-color:#fff;color:#000;min-height:100vh;min-width:100vw;box-sizing:border-box;}
-a:link, a:visited{color:#000;text-decoration:underline;}
-a:focus, a:hover{cursor:pointer;background-color:#cf0;outline:#333 dotted 1px;}
+
+pre, code{font-size:smaller;font-family:"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", "Lucida Console", monospace;}
+img, iframe{border: 1px solid #000;}
+a:link, a:visited{color:#000;text-decoration:underline;transition: all 400ms linear;background-color:#fff;}
+a:focus, a:hover{cursor:pointer;background-color:#cf0;}
+a:focus{outline:#333 dotted 1px;}
 /* space before, related to following */
 h1,h2,h3,h4,h5,h6{margin-inline:0;margin-block-start:0.5rem;margin-block-end:0.2rem;}
 /* space after, related to previous*/
@@ -41,6 +45,7 @@ img{border:1px solid #000;}
 <a href="https://gist.github.com/jimmont/aaa946e035875270f2c7179aaec11c7f">email validation, including i18n</a>
 <a href="/devdevdev/http.js"><b>devdevdev/http.js</b> for development</a>
 <a wip href="/unpkg"><b>unpkg</b> using unpkg.com to source modules</a>
+<a href="https://gist.github.com/jimmont/63b3a0506d0c5da9a9831e30be22a758">jsx-template-transformer.js transform JSX to tagged template literals</a>
 <a wip href="/devdevdev"><b>devdevdev</b> various utilities</a>
 <a href="/devdevdev/www/test-bdd.js"><b>test-bdd</b> experimental testing library</a>
 <a href="/demos">demos</a>
@@ -48,6 +53,7 @@ img{border:1px solid #000;}
 
 
 <a href="https://github.com/jimmont">github/jimmont</a>
+<a href="https://stackoverflow.com/users/965666/jimmont">StackOverflow</a>
 </nav>
 <h2>general approach</h2>
 <p>Continuous improvement with respect and appreciation for the individuals composing the team and community. Working together we accomplish more than apart. We are a composite of the intersections of and with others, realizing opportunities by focusing on and finding solutions. More detail at <a href="https://en.wikipedia.org/wiki/The_Toyota_Way">The Toyota Way</a>, <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">Scrum</a> and <a href="https://en.wikipedia.org/wiki/Agile_software_development">Agile</a>.</p>
@@ -66,7 +72,7 @@ img{border:1px solid #000;}
 <h2>testing</h2>
 <p>A balance of unit, functional and composite end-to-end testing provides best value. Unit tests duplicate code size and must be maintained to not provide false negatives. Ideally long-lived and especially high-use code has coverage--otherwise that investment, especially initially can be better made at higher-level coverage. Functional and compositve e2e tests are increasingly expensive yet provide very high value. Imagine customers cannot login to the product or a sales person cannot make a presentation. Being able to auto-play these scenarios by anyone in the organization, including for sales presentations, is of high value to the business.</p>
 <h2>versioning</h2>
-<p>major.minor.patch - major integer indicating backward-incompatible; minor integer indicating features are backward-compatible; patch fixes bugs indicated by a integer prepresentation of the release time, naturally incrementing forward. Something like <code>0.4.20000101080000000 from <code>`major.minor.(new Date()).toISOString().replace(/[^\d]/g, '')`</code>.</p>
+<p>major.minor.patch - major integer indicating backward-incompatible; minor integer indicating features are backward-compatible; patch fixes bugs indicated by a integer prepresentation of the release time, naturally incrementing forward. Something like <code>0.4.20000101080000000</code> from <code>`major.minor.(new Date()).toISOString().replace(/[^\d]/g, '')`</code>.</p>
 <h2>experience</h2>
 <p>note: varying depth for any given item</p>
 <p wip>technologies: Web, Web Components, d3, React, JavaScript, Perl, Go, C, Python, C#, Angularjs, React+Redux, jQuery, d3, vanilla js, WebdriverIO, Emberjs, Express, Git, Jenkins, MySQL, Postgresql, SQL Server, SQLite, Firebase, Debian, macOS, ES5, ES6+; currently using git, native Web APIs and vanilla ES6+ in Nodejs via GCP/Firebase, NWjs, ...TODO...</p>
