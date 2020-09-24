@@ -14,20 +14,19 @@ on: #[push, pull_request]
       - develop
 jobs:
   app-thing:
-    env:
-      APP_URL: 'https://jimmont.github.io/app.js'
-      APP_TEST_URL: 'https://jimmont.github.io/app.test.js'
-    name: 🦕 ${{ APP_URL }}
+    name: 🦕
     steps:
       - name: use Deno
         uses: denolib/setup-deno@v2
         with:
           deno-version: v1.x
-      - run: |
-          deno --version
-          deno run ${{ APP_URL }}
-          deno test ${{ APP_TEST_URL }}
-      - shell: bash
+        env:
+          APP_URL: https://jimmont.github.io/app.js
         run: |
-          echo "🌻 $APP_URL"
+          deno --version
+          deno run --allow-net $APP_URL
+          deno test https://jimmont.github.io/app.test.js
+#      - shell: bash
+#        run: |
+#          echo "🌻 $APP_URL"
     
