@@ -1,6 +1,8 @@
 # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context
 # https://github.com/marketplace/actions/deploy-to-github-pages
-name: run 🏄
+# https://docs.github.com/en/developers/webhooks-and-events/creating-webhooks
+# ?? https://github.com/marketplace/actions/webhook-action
+name: incoming 🏌️
 on: #[push, pull_request]
   push:
     branches:
@@ -17,19 +19,16 @@ jobs:
     name: 🦕
     runs-on: ubuntu-latest
     steps:
-      - name: setup 👷
+      - name: 👷 setup
         uses: denolib/setup-deno@v2
         with:
           deno-version: v1.x
-        env:
-          APP_URL: https://jimmont.github.io/app.js
-          APP_TEST_URL: https://jimmont.github.io/app.test.js
-      - name: run 🏌️
+      - name: 🏄 run
         run: |
           deno --version
           deno run --allow-net https://jimmont.github.io/app.js
           deno test https://jimmont.github.io/app.test.js
-#      - shell: bash
-#        run: |
-#          echo "🌻 $APP_URL"
+      - shell: bash
+        run: |
+          echo "🌻 hey"
     
