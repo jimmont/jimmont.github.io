@@ -13,10 +13,10 @@ on: #[push, pull_request]
       - master
       - develop
 jobs:
-  env:
-    APP_URL: 'https://jimmont.github.io/app.js'
-    APP_TEST_URL: 'https://jimmont.github.io/app.test.js'
   app-thing:
+    env:
+      APP_URL: 'https://jimmont.github.io/app.js'
+      APP_TEST_URL: 'https://jimmont.github.io/app.test.js'
     name: 🦕 ${{ APP_URL }}
     steps:
       - name: use Deno
