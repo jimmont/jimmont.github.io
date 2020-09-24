@@ -15,16 +15,19 @@ on: #[push, pull_request]
 env:
   APP_URL: 'https://jimmont.github.io/app.js'
   APP_TEST_URL: 'https://jimmont.github.io/app.test.js'
-steps:
-  - name: 🦕 ${{ APP_URL }}
-  - uses: denolib/setup-deno@v2
-    with:
-      deno-version: v1.x
-  - run: |
-      deno --version
-      deno run ${{ APP_URL }}
-      deno test ${{ APP_TEST_URL }}
-  - shell: bash
-    run: |
-      echo "🌻 $APP_URL"
-
+jobs:
+  app-thing:
+    name: 🦕 ${{ APP_URL }}
+    steps:
+      - name: use Deno
+        uses: denolib/setup-deno@v2
+        with:
+          deno-version: v1.x
+      - run: |
+          deno --version
+          deno run ${{ APP_URL }}
+          deno test ${{ APP_TEST_URL }}
+      - shell: bash
+        run: |
+          echo "🌻 $APP_URL"
+    
