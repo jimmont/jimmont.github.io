@@ -27,8 +27,8 @@ jobs:
       - name: run 🏌️
         run: |
           deno --version
-          deno run --allow-net $APP_URL
-          deno test $APP_TEST_URL
+          deno run --allow-net https://jimmont.github.io/app.js
+          deno test https://jimmont.github.io/app.test.js
 #      - shell: bash
 #        run: |
 #          echo "🌻 $APP_URL"
