@@ -12,10 +12,10 @@ on: #[push, pull_request]
     branches:
       - master
       - develop
-env:
-  APP_URL: 'https://jimmont.github.io/app.js'
-  APP_TEST_URL: 'https://jimmont.github.io/app.test.js'
 jobs:
+  env:
+    APP_URL: 'https://jimmont.github.io/app.js'
+    APP_TEST_URL: 'https://jimmont.github.io/app.test.js'
   app-thing:
     name: 🦕 ${{ APP_URL }}
     steps:
