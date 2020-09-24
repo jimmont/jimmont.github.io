@@ -1,0 +1,30 @@
+# https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context
+# https://github.com/marketplace/actions/deploy-to-github-pages
+name: run 🏄
+on: #[push, pull_request]
+  push:
+    branches:
+      - master
+      - develop
+      # - 'releases/**'
+      # - '!releases/**-alpha'
+  pull_request:
+    branches:
+      - master
+      - develop
+env:
+  APP_URL: 'https://jimmont.github.io/app.js'
+  APP_TEST_URL: 'https://jimmont.github.io/app.test.js'
+steps:
+  - name: 🦕 ${{ APP_URL }}
+  - uses: denolib/setup-deno@v2
+    with:
+      deno-version: v1.x
+  - run: |
+      deno --version
+      deno run ${{ APP_URL }}
+      deno test ${{ APP_TEST_URL }}
+  - shell: bash
+    run: |
+      echo "🌻 $APP_URL"
+
