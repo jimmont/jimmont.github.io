@@ -16,16 +16,18 @@ jobs:
   app-thing:
     name: 🦕
     steps:
-      - name: use Deno
+      - name: setup 👷
         uses: denolib/setup-deno@v2
         with:
           deno-version: v1.x
         env:
           APP_URL: https://jimmont.github.io/app.js
+          APP_TEST_URL: https://jimmont.github.io/app.test.js
+      - name: run 🏌️
         run: |
           deno --version
           deno run --allow-net $APP_URL
-          deno test https://jimmont.github.io/app.test.js
+          deno test $APP_TEST_URL
 #      - shell: bash
 #        run: |
 #          echo "🌻 $APP_URL"
