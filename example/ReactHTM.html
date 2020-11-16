@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 <title>use HTM to reduce work in React apps</title>
 <meta name="description" content="example using HTM with React to replace JSX and reduce work">
-<meta name="ROBOTS" content="NONE,NOINDEX,NOARCHIVE,NOFOLLOW">
 <style>
 html,body{margin:0;padding:0;min-width:320px;min-height:320px;box-sizing:border-box;background-color:#cf0;}
 body{
@@ -24,9 +23,16 @@ label{user-select:none;}
 <section react></section>
 <p>More detail at the <a rel=noopener href="https://github.com/developit/htm">HTM Github project</a>, including benefits and improvements (removes JSX transpile dependency, attributes and optional quotes, fragment handling, etc).</p>
 <p>See the related <a href="https://dev.to/jimmont/the-web-platform-lighten-the-jsx-load-in-react-apps-17id" rel=noopener>DEV.to article "the web platform: lighten the JSX load in React apps"</a> for an overview.</p>
+<script src="/lib/react-bundle.js"></script>
+<!-- for standalone, simply do:
+<script src="https://unpkg.com/htm"></script>
+with one of the prod or dev versions:
+<script src="https://unpkg.com/react/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+--OR--
 <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/htm"></script>
+-->
 <script>
 const jsx = htm.bind(React.createElement);
 
